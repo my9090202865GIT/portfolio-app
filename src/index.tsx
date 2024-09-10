@@ -37,7 +37,10 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+],
+  {
+    basename: "/portfolio-app", // Set the basename to match your GitHub Pages repo name
+  });
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
