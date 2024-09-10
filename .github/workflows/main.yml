@@ -5,9 +5,15 @@ on:
     branches:
       - master
     paths-ignore:
-      - 'README.md'
-      - 'docs/**'
-      
+      - "README.md"
+      - "docs/**"
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - "README.md"
+      - "docs/**"
+
 env:
   CI: false
 

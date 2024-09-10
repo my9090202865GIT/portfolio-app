@@ -8,7 +8,7 @@ describe("", () => {
   test('App component render', () => {
     act(() => {
       render(
-        <MemoryRouter initialEntries={['/']}>
+        <MemoryRouter initialEntries={['/portfolio-app']}>
           <App />
         </MemoryRouter>
       );
