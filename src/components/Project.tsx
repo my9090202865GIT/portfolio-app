@@ -89,8 +89,8 @@ export default function Project() {
               <CardMedia
                 component="img"
                 height="140"
-                image={`/${project.name}`}
-                alt="green iguana"
+                image={`/portfolio-app/${project.name}`}
+                alt={project.name}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -101,7 +101,7 @@ export default function Project() {
                     size="small"
                     color="primary"
                     label={technology}
-                    avatar={<Avatar src={`/icons/${technology}.png`} />}
+                    avatar={<Avatar src={`/portfolio-app/icons/${technology}.png`} />}
                   />
                 ))}
                 <Link href="#" underline="none">

@@ -46,7 +46,7 @@ const Skills = () => {
             <>
               <ListItem alignItems="flex-start" sx={{ display: "inline-block", width: "auto" }}>
                 <ListItemAvatar>
-                  <Avatar alt="Remy Sharp" src={`/skills_icon/${item.logo}`} />
+                  <Avatar alt="Remy Sharp" src={`/portfolio-app/skills_icon/${item.logo}`} />
                 </ListItemAvatar>
                 <ListItemText
                   primary={item.skill}

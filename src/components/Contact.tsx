@@ -55,7 +55,7 @@ const Contact = () => {
 
         }}
         alt="The house from the offer."
-        src="/background_image_2400.jpg"
+        src="/portfolio-app/background_image_2400.jpg"
       />
       <Typography variant="h4" gutterBottom>
         Contact Us
