@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+    paths-ignore:
+      - 'README.md'  # Ignore changes to README.md
+      - 'docs/**'
       
 env:
   CI: false
