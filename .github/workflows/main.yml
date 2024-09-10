@@ -22,8 +22,16 @@ jobs:
         with:
           node-version: 16
 
+      - name: Cache node modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install
 
       - name: Run tests
         run: npm test -- --watchAll=false
@@ -41,8 +49,16 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies (if cache misses)
+        run: npm install
 
       - name: Build project
         run: npm run build
